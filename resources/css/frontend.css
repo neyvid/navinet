@@ -3615,14 +3615,14 @@ th {
 -------------------------------------------------------------------------------------*/
 @font-face{
     font-family:'WYekan';
-    src:url('persian-fonts/WYekan.eot?#') format('eot'),
-    url('persian-fonts/WYekan.ttf') format('truetype');
+    src:url('../fonts/WYekan.eot?#') format('eot'),
+    url('../fonts/WYekan.ttf') format('truetype');
 }
 @font-face{
     font-family:'BKoodakBold';
-    src:url('persian-fonts/BKoodakBold.eot?#') format('eot'),
-    url('persian-fonts/BKoodakBold.woff') format('woff'),
-    url('persian-fonts/BKoodakBold.ttf') format('truetype');
+    src:url('../fonts/BKoodakBold.eot?#') format('eot'),
+    url('../fonts/BKoodakBold.woff') format('woff'),
+    url('../fonts/BKoodakBold.ttf') format('truetype');
 }
 /*===================================================================================*/
 /*  1. General Styles

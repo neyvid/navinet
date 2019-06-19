@@ -13,4 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .styles('resources/css/frontend.css','public/css/frontend.css');
+    .copy(['node_modules/bootstrap/dist/js/bootstrap.min.js','node_modules/raphael/raphael.min.js','node_modules/morris.js/morris.min.js','node_modules/jquery-sparkline/jquery.sparkline.min.js'],'public/js/admin')
+    .styles('resources/css/frontend.css','public/css/frontend.css')
+    .copy('node_modules/font-awesome/css/font-awesome.min.css','public/css/admin')
+    .copyDirectory('node_modules/font-awesome/fonts','public/css/admin/fonts')
+    .copy(['node_modules/Ionicons/dist/css/ionicons.min.css','node_modules/morris.js/morris.css','node_modules/jvectormap/jquery-jvectormap.css','node_modules/bootstrap-daterangepicker/daterangepicker.css'],'public/css/admin');
