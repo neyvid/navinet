@@ -1,4 +1,5 @@
 @extends("frontend.layout.frontendLayout")
+@section('page_title','خانه')
 @section('content')
     <div id="container">
         <!-- Feature Box Start-->
