@@ -1,14 +1,18 @@
 {
+    "/js/admin/myAdminJs.js": "/js/admin/myAdminJs.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/admin/bootstrap.min.js": "/js/admin/bootstrap.min.js",
     "/js/admin/raphael.min.js": "/js/admin/raphael.min.js",
     "/js/admin/morris.min.js": "/js/admin/morris.min.js",
     "/js/admin/jquery.sparkline.min.js": "/js/admin/jquery.sparkline.min.js",
+    "/js/admin/dataTables.bootstrap.min.js": "/js/admin/dataTables.bootstrap.min.js",
+    "/js/admin/jquery.dataTables.min.js": "/js/admin/jquery.dataTables.min.js",
     "/css/frontend.css": "/css/frontend.css",
     "/css/admin/font-awesome.min.css": "/css/admin/font-awesome.min.css",
     "/css/admin/ionicons.min.css": "/css/admin/ionicons.min.css",
     "/css/admin/morris.css": "/css/admin/morris.css",
     "/css/admin/jquery-jvectormap.css": "/css/admin/jquery-jvectormap.css",
-    "/css/admin/daterangepicker.css": "/css/admin/daterangepicker.css"
+    "/css/admin/daterangepicker.css": "/css/admin/daterangepicker.css",
+    "/css/admin/dataTables.bootstrap.min.css": "/css/admin/dataTables.bootstrap.min.css"
 }

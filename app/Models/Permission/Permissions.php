@@ -14,8 +14,8 @@ class Permissions
     {
         return [
             self::TOTALACCESS=>'دسترسی کل',
-            self::SUPPORTER=>'دسترسی پشتیبان',
-            self::USER=>'دسترسی کاربر'
+            self::SUPPORTERACCESS=>'دسترسی پشتیبان',
+            self::USERACCESS=>'دسترسی کاربر'
         ];
     }
 

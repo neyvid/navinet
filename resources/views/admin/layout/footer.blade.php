@@ -200,6 +200,7 @@
 <!-- ./wrapper -->
 
 <script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/admin/myAdminJs.js')}}"></script>
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -215,6 +216,9 @@
 <script src="{{asset('js/admin/morris.min.js')}}"></script>
 <!-- Sparkline -->
 <script src="{{asset('js/admin/jquery.sparkline.min.js')}}"></script>
+<!-- DataTables -->
+<script src="{{asset('js/admin/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/admin/dataTables.bootstrap.min.js')}}"></script>
 <!-- jvectormap -->
 <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>

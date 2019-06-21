@@ -19,6 +19,8 @@
     <!-- Ionicons -->
 
     <link rel="stylesheet" href="{{asset('css/admin/ionicons.min.css')}}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{asset('css/admin/dataTables.bootstrap.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -61,13 +63,6 @@
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
-
-
-            <!-- Delete This after download -->
-            <a href="https://github.com/hosseinizadeh/AdminLTE_Persian" class="btn hidden-xs"
-               style="margin:6px 100px;padding:9px 50px;background-color:#d61577;border-color:#ad0b5d;font-weight:bold;color:#FFF">دانلود
-                رایگان قالب</a>
-            <!-- End Delete-->
 
 
             <div class="navbar-custom-menu">
