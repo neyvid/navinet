@@ -127,7 +127,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\xampp\htdocs\navinet\resources\js\admin\myAdminJs.js */"./resources/js/admin/myAdminJs.js");
+module.exports = __webpack_require__(/*! F:\Project Of Web\navinet\resources\js\admin\myAdminJs.js */"./resources/js/admin/myAdminJs.js");
 
 
 /***/ })

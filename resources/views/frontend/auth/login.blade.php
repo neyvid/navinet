@@ -23,6 +23,9 @@
                             <a href="{{route('frontend.register.form')}}" class="btn btn-primary">ثبت نام</a></div>
                         <div class="col-sm-6">
                             <h2 class="subtitle">مشتری قبلی</h2>
+                            @if(session('warning'))
+                                <div class="alert alert-warning"><i class="fa fa-warning"></i>{{session('warning')}}</div>
+                            @endif
                             <p><strong>من از قبل مشتری شما هستم</strong></p>
                             <form method="post">
                                 {{@csrf_field()}}
