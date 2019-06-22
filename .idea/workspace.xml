@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761031c1-3f36-4387-a988-2994b6f8d071" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/admin/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/admin/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/admin/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/admin/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/admin/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/admin/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/dataTables.bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/dataTables.bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/ionicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/ionicons.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/jquery-jvectormap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/jquery-jvectormap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/morris.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/morris.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/bootstrap/dist/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/bootstrap/dist/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/dataTables.bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/dataTables.bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/jquery.dataTables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/jquery.sparkline.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/jquery.sparkline.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/morris.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/morris.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/admin/myAdminJs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/myAdminJs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/auth/login.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,13 +37,14 @@
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="php" value="2" />
+          <entry key="test" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
           <entry key="Blade" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -68,7 +63,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="533">
@@ -77,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="324">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -90,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/auth/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="20" selection-end-column="26" />
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -386,12 +381,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560878378755</updated>
       <workItem from="1560878382146" duration="51118000" />
-      <workItem from="1561176403238" duration="2421000" />
+      <workItem from="1561176403238" duration="2699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53539000" />
+    <option name="totallyTimeSpent" value="53817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -462,11 +457,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1023" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -593,14 +583,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -615,6 +598,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>
