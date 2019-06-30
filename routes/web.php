@@ -21,10 +21,17 @@ Route::group(['namespace' => 'Frontend'], function () {
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'role:1|2']], function () {
     Route::get('/', 'AdminController@index')->name('admin.home');
 //    Routes For User Controll in Admin
+
     Route::get('/users', 'UserController@index')->name('admin.user.index');
+    Route::get('/categories','CategoryController@index')->name('admin.category.index');
+
     Route::group(['middleware' => ['permission:1']], function () {
+//        User Store
         Route::get('/user/create', 'UserController@create')->name('admin.user.create.form');
         Route::post('/user/create', 'UserController@store')->name('admin.user.store');
+//        Category Store
+        Route::get('/category/create','CategoryController@create')->name('admin.category.create.form');
+        Route::post('category/create','CategoryController@store')->name('admin.category.store');
     });
 
 });

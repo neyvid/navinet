@@ -38,6 +38,18 @@
                     <li><a href="{{route('admin.user.create.form')}}"><i class="fa fa-circle-o"></i>ایجاد کاربر جدید</a></li>
                 </ul>
             </li>
+            <li class="active treeview">
+                <a href="#">
+                    <i class="fa fa-list"></i> <span>دسته بندی ها</span>
+                    <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="{{route('admin.category.index')}}"><i class="fa fa-circle-o"></i>لیست دسته بندی ها</a></li>
+                    <li><a href="{{route('admin.category.create.form')}}"><i class="fa fa-circle-o"></i>ایجاد دسته جدید</a></li>
+                </ul>
+            </li>
 
 {{--            <li class="header">برچسب ها</li>--}}
 

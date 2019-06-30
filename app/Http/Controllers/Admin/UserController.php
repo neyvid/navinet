@@ -22,7 +22,8 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('admin.user.index');
+        $allUsers=$this->userRepository->all();
+        return view('admin.user.index',compact('allUsers'));
 
     }
 

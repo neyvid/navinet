@@ -19,14 +19,15 @@
         <label>نقش این حساب را انتخاب کنید:</label>
         <select class="form-control" name="role">
             @foreach($roles as $role)
-                <option value="{{$role->name}}">{{\App\Models\Roles\Roles::getRoleName($role->name)}}</option>
+                <option @if($role->name==\App\Models\Roles\Roles::USER) selected @endif value="{{$role->name}}">{{\App\Models\Roles\Roles::getRoleName($role->name)}}</option>
+
             @endforeach
         </select>
     </div>  <div class="form-group">
         <label>سطح دسترسی این حساب را انتخاب کنید:</label>
         <select class="form-control" name="permission">
             @foreach($permissions as $permission)
-                <option value="{{$permission->name}}">{{\App\Models\Permission\Permissions::getPermissionName($permission->name)}}</option>
+                <option @if($role->name==\App\Models\Permission\Permissions::USERACCESS) selected @endif value="{{$permission->name}}">{{\App\Models\Permission\Permissions::getPermissionName($permission->name)}}</option>
             @endforeach
         </select>
     </div>
