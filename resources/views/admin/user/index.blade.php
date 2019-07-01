@@ -35,7 +35,7 @@
                 @endforeach
             </td>
             <td>
-                {{$user->status}}
+                {{$user->user_status=2}}
             </td>
 
         </tr>
@@ -49,6 +49,7 @@
         <th>ایمیل کاربر</th>
         <th>نقش/سطح دسترسی</th>
         <th>وضعیت</th>
+        <th>عملیات</th>
     </tr>
     </tfoot>
 @endsection
