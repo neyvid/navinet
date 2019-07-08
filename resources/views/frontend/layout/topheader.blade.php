@@ -86,13 +86,20 @@
             </div>
             <div id="top-links" class="nav pull-right flip">
                 @auth()
-                    {{ \Illuminate\Support\Facades\Auth::user()->mobile }}
+                    <div class="links">
+                        <ul>
+                            <li><a href="#">پنل کاربری شما</a></li>
+                            <li><a href="{{route('logout')}}">خروج</a></li>
+
+                        </ul>
+                    </div>
                 @endauth
                 @guest()
                     <ul>
                         <li><a href="{{route('frontend.login.form')}}">ورود</a></li>
                         <li><a href="{{route('frontend.register.form')}}">ثبت نام</a></li>
-                    </ul>                @endguest
+                    </ul>
+                @endguest
             </div>
         </div>
     </div>
