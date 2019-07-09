@@ -7,11 +7,18 @@ Route::group(['namespace' => 'Frontend'], function () {
 //    Routes For User Authenticate
     Route::get('/login', 'UserController@login')->name('frontend.login.form');
     Route::post('/login', 'UserController@doLogin')->name('frontend.doLogin');
+    Route::get('/logout', 'UserController@logout')->name('logout');
+    Route::get('/resetpassword', 'UserController@resetPasswordFrom')->name('frontend.resetpasswordform');
+    Route::post('/resetpassword', 'UserController@resetPassword')->name('frontend.resetpassword');
+    Route::get('/setpassword', 'UserController@setNewPasswordForm')->name('frontend.setpasswordform');
+    Route::post('/setpassword', 'UserController@setNewPassword')->name('frontend.setpassword');
     Route::get('/register', 'UserController@register')->name('frontend.register.form');
     Route::post('/register', 'UserController@doRegister')->name('frontend.doRegister');
     Route::get('/createRole', 'UserController@createRole');
     Route::get('/createPermission', 'UserController@createPermission');
     Route::get('/assignPermissionToRole', 'UserController@assignPermissionToRole');
+
+
 
 });
 

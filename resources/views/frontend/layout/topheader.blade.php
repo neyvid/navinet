@@ -50,23 +50,23 @@
                     <button class="btn-link dropdown-toggle" data-toggle="dropdown"><span> <img src="image/flags/gb.png"
                                                                                                 alt="انگلیسی"
                                                                                                 title="انگلیسی">انگلیسی <i
-                                    class="fa fa-caret-down"></i></span></button>
+                                class="fa fa-caret-down"></i></span></button>
                     <ul class="dropdown-menu">
                         <li>
                             <button class="btn btn-link btn-block language-select" type="button" name="GB"><img
-                                        src="image/flags/gb.png" alt="انگلیسی" title="انگلیسی"/> انگلیسی
+                                    src="image/flags/gb.png" alt="انگلیسی" title="انگلیسی"/> انگلیسی
                             </button>
                         </li>
                         <li>
                             <button class="btn btn-link btn-block language-select" type="button" name="GB"><img
-                                        src="image/flags/ar.png" alt="عربی" title="عربی"/> عربی
+                                    src="image/flags/ar.png" alt="عربی" title="عربی"/> عربی
                             </button>
                         </li>
                     </ul>
                 </div>
                 <div id="currency" class="btn-group">
                     <button class="btn-link dropdown-toggle" data-toggle="dropdown"><span> تومان <i
-                                    class="fa fa-caret-down"></i></span></button>
+                                class="fa fa-caret-down"></i></span></button>
                     <ul class="dropdown-menu">
                         <li>
                             <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro
@@ -86,13 +86,24 @@
             </div>
             <div id="top-links" class="nav pull-right flip">
                 @auth()
-                    {{ \Illuminate\Support\Facades\Auth::user()->mobile }}
+                    <div class="links">
+                        <ul>
+                            @hasrole(App\Models\Roles\Roles::MANAGER)
+                                <li><a href="{{route('admin.home')}}">پنل مدیریت سایت</a></li>
+                                <li><a href="{{route('logout')}}">خروج</a></li>
+                            @else
+                                <li><a href="#">پنل کاربری شما</a></li>
+                                <li><a href="{{route('logout')}}">خروج</a></li>
+                            @endhasrole
+                        </ul>
+                    </div>
                 @endauth
                 @guest()
                     <ul>
                         <li><a href="{{route('frontend.login.form')}}">ورود</a></li>
                         <li><a href="{{route('frontend.register.form')}}">ثبت نام</a></li>
-                    </ul>                @endguest
+                    </ul>
+                @endguest
             </div>
         </div>
     </div>

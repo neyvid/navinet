@@ -3,14 +3,18 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Requests\UserRegister;
+use App\Mail\ResetPasswordEmail;
 use App\Models\Permission\Permissions;
 use App\Models\Roles\Roles;
 use App\Models\User;
 use App\Repository\UserRepository\UserRepository;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
@@ -32,12 +36,76 @@ class UserController extends Controller
         return view('frontend.auth.login', compact('title'));
     }
 
-    public function dologin(Request $request)
+    public function doLogin(Request $request)
     {
         if (Auth::attempt(['mobile' => $request->mobile, 'password' => $request->password], $request->has('remember_me') ? true : false)) {
             return redirect()->intended();
         }
         return redirect()->back()->with('warning', 'اطلاعات کاربری صحیح نمی باشد');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/');
+    }
+
+    public function resetPasswordFrom()
+    {
+        $title = 'فرم بازیابی رمز عبور';
+        if (Auth::check()) {
+            return redirect()->back();
+        }
+        return view('frontend.auth.resetpassword', compact('title'));
+
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $resetPassInput = $request->resetPassInput;
+        $isUserExist = $this->userRepository->findBy(['email' => $resetPassInput]);
+        if ($isUserExist && $isUserExist instanceof User) {
+            $tokenCreate = bcrypt(15);
+            DB::table('password_resets')->insert([
+                'email' => $resetPassInput,
+                'token' => $tokenCreate,
+                'created_at' => Carbon::now()
+            ]);
+            Mail::to($resetPassInput)->send(new ResetPasswordEmail($isUserExist, $tokenCreate));
+            return redirect()->back()->with('success', 'ایمیل یادآوری رمز عبور برای شما ارسال گردید .لطفا ایمیل خود را بررسی کنید.');
+        }
+        return redirect()->back()->with('warning', 'پست الکترونیک یا شماره موبایل وارد شده در سایت ثبت نشده است !');
+
+    }
+
+    public function setNewPasswordForm(Request $request)
+    {
+        $title = 'ثبت رمز عبور جدید';
+        $error='لینک بازیابی رمزعبور معتبر نمی باشد.';
+        if (Auth::check()) {
+            return redirect('/');
+        }
+//        if ($request->rtk) {
+//            $resetpassRow = DB::table('password_resets')->where('token', $request->rtk)->first();
+//            $diffHours= $tokenTime = Carbon::createFromFormat('Y-m-d H:i:s', $resetpassRow->created_at)->diffInHours(Carbon::now());
+//            if($diffHours>2){
+//                return view('frontend.auth.setpasswordform', compact('title','error'));
+//            }
+//        }
+        return view('frontend.auth.setpasswordform', compact('title'));
+    }
+
+    public function setNewPassword(Request $request)
+    {
+        $token = $request->input('rtk');
+        $isExistRtk = DB::table('password_resets')->where('token', $token)->orderBy('created_at', 'desc')->first();
+        if ($isExistRtk) {
+            $user = $this->userRepository->findBy(['email' => $isExistRtk->email]);
+            $user->password = Hash::make($request->newPassword);
+            $user->save();
+            return redirect('/');
+        }
+
     }
 
     public function register()

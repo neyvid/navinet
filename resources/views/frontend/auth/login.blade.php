@@ -47,7 +47,7 @@
                                         </div>
                                     </div>
                                     <br/>
-                                    <a href="#">فراموشی رمز عبور</a>
+                                    <a href="{{route('frontend.resetpasswordform')}}">فراموشی رمز عبور</a>
                                 </div>
                                 <input type="submit" value="ورود" class="btn btn-primary"/>
 
